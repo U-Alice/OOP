@@ -41,5 +41,24 @@ echo ((new DateTime())->format('u')); // microsecond
 echo ((new DateTime())->format('i')); //current minutes
 
 
-echo 
+echo "<h1>Properties and methods</h1>";
+
+class Student{
+    public $bar = "course";
+    public function bar(){
+        echo "register";
+    }
+}
+$obj = new Student();
+echo $obj-> bar, PHP_EOL, $obj-> bar(), PHP_EOL;
+
+//magic methods 
+
+class School{
+    public function __construct (){
+        echo "Object created";
+    }
+}
+
+$s = new School();
 ?>
