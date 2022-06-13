@@ -1,8 +1,8 @@
 <?php
 
 class Person{
-    public $firstName;
-    public $lastName;
+    private $firstName;
+    private $lastName;
     private $age;
 
     public function __toString(){
