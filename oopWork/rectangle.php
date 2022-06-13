@@ -8,7 +8,7 @@ public $height;
 
 public function __construct($width, $height) {
 $this->width = $width;
-$this->lenght = $length;
+$this->height = $height;
 }
 public function __toString(){
     return "I am a rectangle";
