@@ -1,7 +1,7 @@
 <?php
 require('fpdf.php');
 
-$connection = new mysqli('localhost', 'inezaaxelle44@gmail.com', 'ine', 'rwanda');
+$connection = new mysqli('localhost', 'Alice', '@Feb7/2022', 'Rwanda');
 
 if ($connection->connect_error) {
     die ("Error in your Connection!");

@@ -88,39 +88,11 @@ if(validateInfo() === "successfull"){
     $password = testData($_POST["password"]);
     $lastName = testData($_POST["lname"]);
     $email = testData($_POST["email"]);
-    $roles = testData($_POST["roles"]);
-    $uploads = "uploads/".$finalName;
-    $DB_SERVER = 'localhost';
-    $DB_NAME =  'rca';
-    $DB_USER_NAME = 'root';
-    $DB_user_password = '@Feb7/2022';
 
-    $database = new 
-
-//create
-if(!$connect){
-     echo mysqli_connect_error();
-}else{
-$insertQuery = "INSERT INTO mis_users(firstName, lastName, email, password, gender, userName, telephone, nationality, images, roles) values('$firstName', '$lastName', '$email', '$password', '$gender','$userName', '$telephone', '$nationality', '$finalName', '$roles')";
-$insert = mysqli_query($connect, $insertQuery) or die ("Error occured". mysqli_error($connect));
-
-if(move_uploaded_file($tempFileName, $uploads)){
-    echo "Image uploaded successfully";
-    echo "<br>";
-}else{
-    echo "failed to upload image";
-}
-
-
-if($connect){
-    echo "Data registered";
-}else{
-    echo "no data added";
-}
-}
-echo "<a href='display.php'>Click here to display the data</a>";
-
-
+    $database = new database();
+    $database -> insert('users', ['firstName'=>$firstName, 'lastName'=>$lastName, 'email'=>$email, 'telephone'=>$telephone, 'nationality'=>$nationality, 'gender' => $gender, 'password'=>$password, 'username'=>$userName]);
+ 
+    echo "<a href='display.php'>Click here to display the data</a>";
 
 }else{
     $result = validateInfo();
