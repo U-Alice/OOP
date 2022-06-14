@@ -86,9 +86,9 @@ if(validateInfo() === "successfull"){
     $userName = testData($_POST["username"]);
     $gender = testData($_POST["gender"]);
     $password = testData($_POST["password"]);
+    $password = hash("md5", $password);
     $lastName = testData($_POST["lname"]);
     $email = testData($_POST["email"]);
-
     $database = new database();
     $database -> insert('users', ['firstName'=>$firstName, 'lastName'=>$lastName, 'email'=>$email, 'telephone'=>$telephone, 'nationality'=>$nationality, 'gender' => $gender, 'password'=>$password, 'username'=>$userName]);
  

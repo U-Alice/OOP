@@ -20,6 +20,9 @@ td {
   padding-left: 10px;
   height: 50px;
 }
+tr:nth-of-type(odd) {
+  background-color: #333c53;
+}
 td,
 table {
   border: 1px solid #777f89;
@@ -60,7 +63,6 @@ a.update {
 a.delete {
   color: rgb(225, 83, 83);
 }
-.id{
-    color: #8cc4e6;
+.id {
+  color: #8cc4e6;
 }
-

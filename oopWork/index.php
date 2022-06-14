@@ -1,10 +1,10 @@
 <?php
 require('fpdf.php');
 
-$connection = new mysqli('localhost', 'Alice', '@Feb7/2022', 'Rwanda');
+$connection = new mysqli('127.0.0.1', 'Alice', '@Feb7/2022', 'rwanda');
 
 if ($connection->connect_error) {
-    die ("Error in your Connection!");
+    die ("Error in your Connection!".$connection->connect_error);
 }
 
 $select = "SELECT * FROM villages";

@@ -16,6 +16,11 @@ form{
     margin-right: auto;
     padding-top: 5vh;
 }
+img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+  }
 .input{
     height: 5vh;
     width: 70%;
@@ -62,4 +67,7 @@ select{
 }
 select:focus{
     outline: none;
+}
+.redirect{
+    margin-left: 40%;
 }
