@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="box">
+      <form action="signup.php" method="post" enctype="multipart/form-data">
+        <!-- <input type="text" name="userid" value="<?=$row['user '] ?>"> -->
+        <h1>Create account</h1>
+        <div class="input">
+        <label>First Name</label
+        ><input type="text" name="fname" placeholder="Enter First Name" />
+    </div>
+    <div class="input">
+        <label>Last Name</label
+        ><input type="text" name="lname" placeholder="Enter Last Name" />
+    </div>
+    <div class="input">
+        <label>Email</label
+        ><input type="text" name="email" placeholder="Enter your email" />
+    </div>
+    <div class="input">
+        <label>Telephone</label
+        ><input
+          type="number"
+          name="telephone"
+          placeholder="Enter Telephone Number"
+        />
+    </div>
+    <div class="input">
+        <label>Gender</label>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          style="margin-left: 68px"
+        />Male <input type="radio" name="gender" value="female" />Female
+        <input type="hidden" name="user_id" />
+    </div>
+        <div class="input">
+        <label>Nationality</label>
+        <select name="nationality" style="margin-left: 51px" id="options">
+          <option value="">--select--</option>
+          <option value="rwanda">Rwanda</option>
+          <option value="rdc">RDC</option>
+          <option value="uganda">Uganda</option>
+          <option value="tanzania">Tanzania</option>
+          <option value="burundi">Burundi</option>
+          <option value="usa">USA</option>
+          <option value="france">France</option>
+          <option value="spain">Spain</option>
+          <option value="korea">Korea</option>
+        </select>
+        </div>
+        <div class="input">
+        <label>User Name</label
+        ><input
+          type="text"
+          name="username"
+          placeholder="Enter your username"
+          style="margin-left: 50px; width: 300px"
+        />
+    </div>
+    <div class="input">
+        <label>Password</label
+        ><input
+          type="password"
+          name="password"
+          placeholder="Enter First Password"
+          style="margin-left: 62px; width: 300px"
+        />
+    </div>
+    <div class="input">
+        <label>Confirm Passw</label
+        ><input
+          type="password"
+          name="cpassword"
+          placeholder="Confirm your Password"
+          style="margin-left: 25px; width: 300px"
+        />
+    </div>
+        <button type="submit" value="Register" id="submit" >Register</button>
+      </form>
+    </div>
+  </body>
+</html>
