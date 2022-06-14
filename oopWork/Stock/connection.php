@@ -29,7 +29,6 @@ class database{
     public function select($table, $rows = '*', $where = null){
         if ($where != null) {
             $sql="SELECT $rows FROM $table WHERE $where";
-            echo $sql;
         }else{
             $sql="SELECT $rows FROM $table";
         }

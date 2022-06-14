@@ -35,7 +35,7 @@ img{
 </head>
 </html>
 <?php
-
+error_reporting(E_ALL);
 include './connection.php';
 if(isset($_POST['submit'])){
     $username = trim($_POST['username']);
@@ -63,9 +63,10 @@ if(isset($_POST['submit'])){
             while(list($userId,$firstname,$lastname,$email,$phone,$gender,$nationality) = mysqli_fetch_array($selectQuery) ){
                 echo "<br>Welcome ".$firstname;
                 echo "<br>";
+                echo $firstname;
+                $cookie_name = "user";
+                $cookie_value = $firstname;
             }
-            $cookie_name = "user";
-            $cookie_value = $firstname;
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
             if(!isset($_COOKIE[$cookie_name])){
                 echo "Cookie named '".$cookie_name."' is not set!";
