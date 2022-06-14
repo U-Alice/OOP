@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="box">
+      <form action="prodInsert.php" method="post" enctype="multipart/form-data">
+        <!-- <input type="text" name="userid" value="<?=$row['user '] ?>"> -->
+        <h1>Add a product</h1>
+        <div class="input">
+          <label>product Name</label
+          ><input type="text" name="pname" placeholder="Enter product Name" />
+        </div>
+        <div class="input">
+          <label>brand</label
+          ><input type="text" name="brand" placeholder="Enter brand's name" />
+        </div>
+        <div class="input">
+          <label>supplier phone</label
+          ><input
+            type="number"
+            name="telephone"
+            placeholder="Enter Telephone Number"
+          />
+        </div>
+        <div class="input">
+          <label>Supplier</label
+          ><input
+            type="text"
+            name="supplier"
+            placeholder="Enter supplier's name"
+            style="margin-left: 50px; width: 300px"
+          />
+        </div>
+        <button type="submit" value="Register" id="submit">Add product</button>
+      </form>
+    </div>
+  </body>
+</html>

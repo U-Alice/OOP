@@ -2,10 +2,10 @@
 //user info collected from input
 class database{
     public $que;
-    private $host = '127.0.0.1';
-    private $password = '@Feb7/2022';
-    private $database = 'Stock';
-    private $username = 'Alice';
+    private $host = 'localhost';
+    private $password = 'ine';
+    private $database = 'store';
+    private $username = 'inezaaxelle44@gmail.com';
 
     public function __construct(){
         $this->mysqli = new mysqli($this->host ,$this->username, $this->password, $this->database);
@@ -29,7 +29,6 @@ class database{
     public function select($table, $rows = '*', $where = null){
         if ($where != null) {
             $sql="SELECT $rows FROM $table WHERE $where";
-            echo $sql;
         }else{
             $sql="SELECT $rows FROM $table";
         }
