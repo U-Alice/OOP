@@ -71,3 +71,7 @@ select:focus{
 .redirect{
     margin-left: 40%;
 }
+.login{
+    /* background-color: #DD505E; */
+    height: 50vh;
+}

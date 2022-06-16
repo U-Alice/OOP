@@ -18,7 +18,6 @@ class database{
         $table_columns = implode(',', array_keys($para));
         $table_values = implode("','", $para);
         $sql = "INSERT INTO $table($table_columns) VALUES('$table_values')";
-        echo $sql;
         $result = $this->mysqli->query($sql);
         if($result){
             echo "successfull";
@@ -35,6 +34,33 @@ class database{
 
         $this->sql = $result = $this->mysqli->query($sql);
     }
-
+    public function update($table, $para=array(), $where){
+        $sql = "UPDATE $table SET ";
+        $i = 0;
+        foreach($para as $key => $value){
+            if($i == 0){
+                $sql .= "$key = '$value'";
+            }else{
+                $sql .= ", $key = '$value'";
+            }
+            $i++;
+        }
+        $sql .= " WHERE $where";
+        $result = $this->mysqli->query($sql);
+        if($result){
+            echo "successfull";
+        }else{
+            echo "failed".$result;
+        }
+    }
+    public function delete($table, $where){
+        $sql = "DELETE FROM $table WHERE $where";
+        $result = $this->mysqli->query($sql);
+        if($result){
+            echo "successfull";
+        }else{
+            echo "failed".$result;
+        }
+    }
 }
 ?>

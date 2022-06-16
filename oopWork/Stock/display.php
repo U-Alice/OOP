@@ -34,10 +34,11 @@ echo "<table class='table'><tr><th>No</th>
              <td>".$rows["nationality"]."</td>
              <td>".$rows["email"]."</td>
              <td>".$rows["username"]."</td>
+             <td><a href=update.php?thisID=".$rows["userId"]." class='update'>Update</a></td>;
+             <td><a href=delete.php?thisID=".$rows["userId"]." class='delete'>Delete</a><td>
              </tr>";
             }
             //  <td><a href=updateDisplay.php?thisID=".$rows["user_id"]." class='update'>Update</a></td>
-            //  <td><a href=delete.php?thisID=".$rows["user_id"]." class='delete'>Delete</a><td>
          echo "</table>";
 
        

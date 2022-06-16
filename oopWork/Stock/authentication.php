@@ -61,20 +61,15 @@ if(isset($_POST['submit'])){
             echo 'Invalid credentials';
         }else{
             while(list($userId,$firstname,$lastname,$email,$phone,$gender,$nationality) = mysqli_fetch_array($selectQuery) ){
-                echo "<br>Welcome ".$firstname;
-                echo "<br>";
-                echo $firstname;
                 $cookie_name = "user";
                 $cookie_value = $firstname;
             }
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
             if(!isset($_COOKIE[$cookie_name])){
-                echo "Cookie named '".$cookie_name."' is not set!";
-
+                echo "Server error! try again";
+                
             }else{
-                 echo
-                 "Cookie'".$cookie_name . "' is set!<br>";
-                 echo "Value is : ".$_COOKIE[$cookie_name];
+                header("Location: ./displayProduct.php");
             }
         }
     }
